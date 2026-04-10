@@ -2,6 +2,12 @@
 Lambda S3 Python lab from the Backspace Academy AWS Certified Developer Associate course.  
 
 create virtual env in /code run -->
-$ virtualenv v-env
+$ python3 -m venv v-env
+This creates:
+v-env/
+  bin/
+  lib/
+  pyvenv.cfg
 $ source v-env/bin/activate
-now you will see (v-env) in front of command prompt
+now you will see (v-env) in front of command prompt -->
+(v-env) ec2-user@...
