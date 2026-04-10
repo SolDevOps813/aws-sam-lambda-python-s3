@@ -47,9 +47,7 @@ Trick Docker with a tag alias by pulling the correct image
 $ docker pull public.ecr.aws/sam/build-python3.9:latest
 
 Tag it with the name SAM expects -->
-$ docker tag \
-  public.ecr.aws/sam/build-python3.9:latest \
-  public.ecr.aws/sam/build-python3.9:latest-x86_64
+$ docker tag public.ecr.aws/sam/build-python3.9:latest public.ecr.aws/sam/build-python3.9:latest-x86_64
 
 then build -->
 sam build --use-container
