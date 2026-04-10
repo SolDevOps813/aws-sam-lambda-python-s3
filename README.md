@@ -21,6 +21,10 @@ now you will see (v-env) in front of command prompt -->
 
 (v-env) ec2-user@...
 
+now install pillow for images and boto3 for aws 
+
+$ pip install pillow boto3
+
 once env set we can use SAM using requirements.txt
 
 pip install -r requirements.txt
