@@ -11,3 +11,9 @@ v-env/
 $ source v-env/bin/activate
 now you will see (v-env) in front of command prompt -->
 (v-env) ec2-user@...
+
+once env set we can use SAM using requirements.txt
+pip install -r requirements.txt
+sam build --use-container
+sam deploy
+
