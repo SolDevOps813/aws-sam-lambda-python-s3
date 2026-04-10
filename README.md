@@ -5,8 +5,8 @@ create virtual env in /code run -->
 
 $ python3 -m venv v-env
 
-
 This creates:
+
 v-env/
 
   bin/
@@ -25,11 +25,19 @@ now install pillow for images and boto3 for aws
 
 $ pip install pillow boto3
 
+now we create the modules need for requirements.txt
+
+$ pip freeze > requirements.txt
+
+now we can deactivate virtual environment
+
+$ deactivate
+
 once env set we can use SAM using requirements.txt
 
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 
-sam build --use-container
+$ sam build --use-container
 
-sam deploy
+$ sam deploy
 
