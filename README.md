@@ -42,11 +42,16 @@ $ sam build --use-container
 $ sam deploy
 
 if build fails for docker image -->
+
+#Re‑authenticate Docker with public ECR again
+aws ecr-public get-login-password --region us-east-1 \
+| docker login --username AWS --password-stdin public.ecr.aws
+
 Trick Docker with a tag alias by pulling the correct image
 
 $ docker pull public.ecr.aws/sam/build-python3.9:latest
 
-Tag it with the name SAM expects -->
+Tag it with the name SAM expects  (important workaround) -->
 $ docker tag public.ecr.aws/sam/build-python3.9:latest public.ecr.aws/sam/build-python3.9:latest-x86_64
 
 then build -->
